@@ -1,36 +1,33 @@
-# Automatic Direct Booking Detector for Holland2Stay
+# Holland2Stay Direct Booking Detector
 
 ## Overview
-This program monitors the "book directly" properties on the Holland2Stay website according to your preferences. When such properties become available, it instantly sends a notification to your Telegram account.
+This application continually checks for available "direct booking" properties on the Holland2Stay website, based on your personal preferences. If a property matching your criteria becomes available, the program instantly notifies you via Telegram.
 
 ## Setup Instructions
 
 ### Prerequisites
-- Basic coding skills (minimal)
-- An online platform to execute the Python program (We recommend PythonAnywhere by Anaconda. Note: You'll need to subscribe to a 6 EUR plan to run this on Cloud)
+- Basic coding abilities
+- A Python-execution platform (I recommend PythonAnywhere by Anaconda. Note: A subscription to the 6 EUR plan is required for cloud execution)
 - A Telegram account
 
-### Steps
-1. Launch Telegram and search for @BotFather.
-2. Send the "/start" message to @BotFather.
-3. Send another message "/newbot" and follow the instructions to set up a bot name and username.
-4. After your bot is ready, make sure to note down the given token (this is crucial).
-5. Search for your bot (using the username you just created) in Telegram, and then press the “Start” button or send a "/start" message.
-6. Open a new browser tab and navigate to `https://api.telegram.org/bot_yourtoken_/getUpdates`, replacing `_yourtoken_` with your API token, then press enter.
-7. Look for "id" - this is your chatID. Make sure to note it down.
-8. Visit the Holland2Stay website, and set all the filters based on the properties you want to monitor.
-9. Set "show" to "rent p/month".
-10. Copy the URL of the page.
-   - For reference, here are some URLs for specific locations:
-     - Eindhoven: `https://holland2stay.com/residences.html?available_to_book=179&city=29&product_list_order=price`
-     - Amsterdam: `https://holland2stay.com/residences.html?available_to_book=179&city=24&product_list_order=price`
-     - Amsterdam + Eindhoven: `https://holland2stay.com/residences.html?available_to_book=179&city=24%2C26&product_list_order=price`
-11. To monitor additional cities, determine the city code first and add "%2C" followed by the city code to the city parameter.
-12. In the `auto_detect` python file, replace:
-    - `url` with the copied URL.
-    - `new_price` with the maximum price you want to monitor.
-    - `TOKEN` with your Telegram bot token.
-    - `chat_id` with your Telegram chat ID.
-13. Set up this Python file on PythonAnywhere and create a task to make it run indefinitely. Note: You'll need a subscription for this functionality.
+### Setup Steps
+1. Open Telegram, search for @BotFather, and send the "/start" message.
+2. Start a new bot by sending "/newbot" and follow the on-screen instructions to set a bot name and username.
+3. After setting up your bot, make a note of the provided token (important for setup).
+4. Find your bot (using the username you've just created) in Telegram, then press the “Start” button or send a "/start" message.
+5. In a new browser tab, navigate to `https://api.telegram.org/bot{yourtoken}/getUpdates`, replacing `{yourtoken}` with your bot token, and hit enter.
+6. Locate the "id" - this is your chatID. Record this for later use.
+7. Open the `auto_detect.py` file in an editor (like VS Code).
+8. Customize the script:
+    - On line 80, replace `TOKEN` with your Telegram bot token.
+    - On line 81, replace `your_chat_id` with your Telegram chat ID (include the quotes, like `"1234567890"`).
+    - On line 86, set the `budget` parameter to your maximum preferred price.
+    - On line 87, fill the `cities` parameter with a list of cities you're interested in (e.g., `["Amsterdam", "Delft"]`).
+9. Set up and run the Python file on PythonAnywhere to execute it continuously (note: this requires a subscription). Alternatively, you can directly run the program on your device, but ensure it remains active during your absence.
+10. As soon as properties matching your criteria are available, you will receive a message on Telegram.
 
-For any queries, feel free to contact me at xuyou1999@icloud.com.
+### Advanced Settings
+- The program is currently configured to check the website every 12 seconds. To change this interval, modify the values on lines 92 and 94 (time is in seconds). Remember to execute responsively, and note that faster scraping can consume more resources if running in the cloud.
+- The program also waits 2 minutes between each message to avoid excessive notifications. You can adjust this interval on line 39.
+
+For any inquiries, feel free to contact me at xuyou1999@icloud.com.
