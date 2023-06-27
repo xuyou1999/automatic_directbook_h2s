@@ -24,6 +24,8 @@ This application continually checks for available "direct booking" properties on
     - On line 86, set the `budget` parameter to your maximum preferred price.
     - On line 87, fill the `cities` parameter with a list of cities you're interested in (e.g., `["Amsterdam", "Delft"]`).
 9. Set up and run the Python file on PythonAnywhere to execute it continuously (note: this requires a subscription). Alternatively, you can directly run the program on your device, but ensure it remains active during your absence.
+    - Go to `Files` tab, upload the file `auto_detect_py`
+    - Go to `Tasks` tab, create an Always-on Task with command `python3.10 /home/{username}/auto_detect.py` by replacing `{username}` to your username
 10. As soon as properties matching your criteria are available, you will receive a message on Telegram.
 
 ### Advanced Settings
