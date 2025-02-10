@@ -1,5 +1,25 @@
 # Holland2Stay Direct Booking Detector
 
+## **Important Notice: Project Status**
+
+**This repository is currently not maintained or functional.** However, I would like to take a moment to explain the background, vision, and reasoning behind this project.
+
+### **Background and Vision**
+The initial goal of this project was to promote equal access to housing resources in the Netherlands, particularly in response to the challenging rental market. I observed that on Mandarin-speaking platforms like RedNote (小红书), some individuals were using bots to secure housing and charging exorbitant commissions for their services. This practice creates an unfair disadvantage for those without coding experience or the financial means to pay for such assistance—**a practice that also violates the terms of service of most housing platforms.**
+
+To address this imbalance, I decided to develop and open-source similar tools, as the underlying technology is publicly available. My aim was to level the playing field and empower individuals to compete fairly in the housing market.
+
+### **The Current Landscape**
+I am encouraged to see that many others who share the same values and vision have begun open-sourcing similar projects on social media and open-source platforms. This collective effort has helped counteract unfair practices by fostering competition and transparency.
+
+Additionally, housing platforms like Holland2Stay have implemented more advanced measures to prevent the use of automated bots, making the rental market fairer for all seekers. As a result, I believe this project no longer needs active support or maintenance. Continuing to do so would also impose increasing deployment complexity and workload, which is no longer justified.
+
+### **Future of This Project**
+While this project is no longer actively maintained, it will remain **open-source and freely available** for anyone to use, modify, or build upon. I encourage others to continue developing solutions that promote fairness and combat exploitative practices (such as those by "黄牛" or scalpers).
+
+### **Final Note**
+I wish you the best of luck in your housing search! If you have any questions or ideas, feel free to reach out or contribute to the project.
+
 ## Overview
 This application continually checks for available "direct booking" properties on the Holland2Stay website, based on your personal preferences. If a property matching your criteria becomes available, the program instantly notifies you via Telegram.
 
